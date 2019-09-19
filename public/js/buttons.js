@@ -1,4 +1,4 @@
-$(document).ready(function() {
+$(function() {
     $(".change-devoured").on("click", function(event) {
       event.preventDefault();
       var id = $(this).data("id");
