@@ -1,7 +1,7 @@
 var express = require("express");
 var router = express.Router();
 
-require("../models/burger");
+var burger = require("../models/burger");
 
 //Create the routes and set logic
 router.get("/", function(req, res){
