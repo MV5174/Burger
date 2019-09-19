@@ -12,7 +12,7 @@ var orm = {
     },
     insertOne: function(table, val1, val2, name, devoured){
         var query = "INSERT INTO " + table + ";";
-        query += "(" + val1 + "," + val2 ")";
+        query += "(" + val1 + "," + val2 + ")";
         query += "VALUES (" + name + "," + devoured + ")";
 
         connection.query(query, function(err, result){

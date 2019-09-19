@@ -1,20 +1,20 @@
-var orm = require("orm.js");
+var orm = require("../config/orm.js");
 
 var burger = {
     //table
-    selectAll: function(table, cb){
+    selectAll: function(cb){
         orm.selectAll("burgers", function (res){
             cb(res);
         })
     },
     //table, val1, val2, name, devoured
-    insertOne: function(table, val1, val2, name, devoured, cb){
+    insertOne: function(name, devoured, cb){
         orm.insertOne("burgers", "name", "devoured", name, devoured, function(res){
             cb(res);
         })
     },
     //table, objVal, condition
-    updateOne: function(table, objVal, condition){
+    updateOne: function(objVal, condition){
         orm.updateOne("burgers", objVal, condition, function(res){
             cb(res);
         })
